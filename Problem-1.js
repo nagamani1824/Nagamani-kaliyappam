@@ -1,17 +1,4 @@
-/**
- * Problem-1: Create a small calculator which performs Addition, Subtraction,
- * Multiplication and Division using class.
- *
- * Calculator inputs : 'a', 'b' and 'type of operation'
- * Datatype: a = double, b = double, type of operation = string
- *
- * Usage (command line):
- *   node Problem-1.js <a> <b> <operation>
- * Examples:
- *   node Problem-1.js 5 2 add
- *   node Problem-1.js 5 2 +
- *   node Problem-1.js 10 2 divide
- */
+
 
 class Calculator {
   constructor(a, b) {
@@ -65,7 +52,7 @@ class Calculator {
   }
 }
 
-/* CLI wrapper */
+
 if (require.main === module) {
   const [, , a, b, op] = process.argv;
   if (a === undefined || b === undefined || op === undefined) {
