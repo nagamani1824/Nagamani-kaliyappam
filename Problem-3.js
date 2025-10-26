@@ -3,7 +3,7 @@ function oddSequenceOddOrFloor(a) {
 
   if (!Number.isInteger(a) || a < 1) return [];
 
-  // If a is even, make it a-1; else keep it same
+  
   const terms = (a % 2 === 1) ? a : (a - 1);
 
   const result = [];
@@ -14,6 +14,7 @@ function oddSequenceOddOrFloor(a) {
   return result;
 }
 
-// Example:
-console.log(oddSequenceOddOrFloor(7)); // [1,3,5,7]
-console.log(oddSequenceOddOrFloor(6)); // [1,3,5]
+console.log(oddSequenceOddOrFloor(7)); 
+console.log(oddSequenceOddOrFloor(6)); 
+console.log(oddSequenceOddOrFloor(1)); 
+console.log(oddSequenceOddOrFloor(0)); 
