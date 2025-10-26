@@ -1,5 +1,3 @@
-
-
 class Calculator {
   constructor(a, b) {
     this.a = Number(a);
@@ -52,22 +50,8 @@ class Calculator {
   }
 }
 
-
-if (require.main === module) {
-  const [, , a, b, op] = process.argv;
-  if (a === undefined || b === undefined || op === undefined) {
-    console.log('Usage: node Problem-1.js <a> <b> <operation>');
-    console.log('Example: node Problem-1.js 5 2 add');
-    process.exit(1);
-  }
-  try {
-    const calc = new Calculator(a, b);
-    const result = calc.compute(op);
-    console.log(result);
-  } catch (err) {
-    console.error('Error:', err.message);
-    process.exit(1);
-  }
-}
-
-module.exports = Calculator;
+const calc1 = new Calculator(10, 5);
+console.log(calc1.compute('add'));     
+console.log(calc1.compute('subtract'));
+console.log(calc1.compute('multiply')); 
+console.log(calc1.compute('divide'));  
