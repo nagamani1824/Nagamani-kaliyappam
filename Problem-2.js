@@ -1,5 +1,6 @@
 
 
+
 function firstNOdds(a) {
   a = Number(a);
   if (!Number.isInteger(a) || a < 1) return [];
@@ -10,15 +11,7 @@ function firstNOdds(a) {
   return result;
 }
 
-/* CLI */
-if (require.main === module) {
-  const [, , a] = process.argv;
-  if (a === undefined) {
-    console.log('Usage: node Problem-2.js <a>');
-    process.exit(1);
-  }
-  const arr = firstNOdds(a);
-  console.log(arr.join(','));
-}
 
-module.exports = firstNOdds;
+const input = 5; 
+const arr = firstNOdds(input);
+console.log(arr.join(',')); 
