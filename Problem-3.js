@@ -1,23 +1,19 @@
-
-
 function oddSequenceOddOrFloor(a) {
   a = Number(a);
+
   if (!Number.isInteger(a) || a < 1) return [];
+
+  // If a is even, make it a-1; else keep it same
   const terms = (a % 2 === 1) ? a : (a - 1);
+
   const result = [];
-  for (let i = 0; i < terms; i++) result.push(2 * i + 1);
+  for (let i = 1; i <= terms; i += 2) {
+    result.push(i);
+  }
+
   return result;
 }
 
-
-if (require.main === module) {
-  const [, , a] = process.argv;
-  if (a === undefined) {
-    console.log('Usage: node Problem-3.js <a>');
-    process.exit(1);
-  }
-  const arr = oddSequenceOddOrFloor(a);
-  console.log(arr.join(','));
-}
-
-module.exports = oddSequenceOddOrFloor;
+// Example:
+console.log(oddSequenceOddOrFloor(7)); // [1,3,5,7]
+console.log(oddSequenceOddOrFloor(6)); // [1,3,5]
